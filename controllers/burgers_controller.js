@@ -1,5 +1,4 @@
 var express = require("express");
-const orm = require("../config/orm.js");
 
 var router = express.Router();
 
@@ -15,35 +14,36 @@ router.get("/", function (req, res) {
             burgers: data
         };
 
-        console.log(bObject);
+        // console.log("contoller file objcts: " + bObject);
         res.render("index", bObject);
     });
-}),
+});
 
 //inserts a burger via insertOne orm 
-router.post("/api/new", function (req, res) {
-
-    var insertBurger = req.body;
-
-    burger.insertOne(insertBurger, function (result) {
-        res.json({ id: result.insertId})
+router.post("/api/burgers", function (req, res) {
+    var newBurger = {
+        "burger_name": req.body.name,
+        "devoured": req.body.devoured
+    }
+    burger.insertOne(newBurger, function (result) {
+        res.json({ id: result.insertId })
     });
-}),
+});
+
 
 //updates a burger via updateOne orm 
-router.put("/api/:id", function (req, res) {
-
+router.put("/api/burgers/:id", function (req, res) {
     var burgerId = req.params.id;
 
-    burger.updateOne(
-        {
-            devoured: true
-        })
-        burgerId, function (data) {
-        console.log(data)
-        
-    })
-})
+    burger.updateOne(burgerId, function (result) {
+        if (result.changedRows == 0) {
+            return res.status(404).end();
+        } else {
+            res.status(200).end();
+        }
+    });
+});
 
 // Export routes for server.js to use.
 module.exports = router;
+
