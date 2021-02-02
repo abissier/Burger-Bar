@@ -8,8 +8,7 @@ $(function () {
         var newDevouredState = {
             devoured: newDevoured
         };
-        // console.log("burger.js file new state " , newDevouredState)
-        // console.log("burger js file ID ", id)
+
         // Send the PUT request to update devoured to true  
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
