@@ -3,6 +3,7 @@
 ## Table of Contents
 * [Description](#description)
 * [Technologies Used](#technologies-used)
+* [Screen Capture](#Screen-Capture)
 * [Project Link](#project-Link)
 
 
@@ -20,9 +21,12 @@ to the right side of the page.
 Each burger is stored in a database and is added or updated via POST, PUT, and GET
 requests. The changes are then automatically rendered on the screen via express-handlebars. 
 
-
 ### Technologies Used
 MySQL, Node, Express, Handlebars, and ORM.
+
+### Screen Capture
+<br>
+<a href="https://ibb.co/xjwZYPY"><img src="https://i.ibb.co/xjwZYPY/burger-Bar.png" alt="burger-Bar" border="0"></a>
 
 ### Project Link
 https://burger-bar-orm.herokuapp.com/
