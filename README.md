@@ -38,6 +38,6 @@ https://burger-bar-orm.herokuapp.com/
 ### Contact 
 Questions? 
 
-Audrey Bissiere-Grote
-Email: abissieregrote@gmail.com
-LinkedIn: https://www.linkedin.com/in/audrey-bissiere-grote/
+* Audrey Bissiere-Grote
+* Email: abissieregrote@gmail.com
+* LinkedIn: https://www.linkedin.com/in/audrey-bissiere-grote/
