@@ -29,7 +29,6 @@ $(function() {
 		$.ajax('/api/burgers/' + id, {
 			type: 'DELETE'
 		}).then(function() {
-			console.log('deleted burger = ', id);
 			location.reload();
 		});
 	});
@@ -38,9 +37,13 @@ $(function() {
 	//on click event to add new burger
 	$('.create-form').on('submit', function(event) {
 		// Make sure to preventDefault on a submit event.
+		event.preventDefault();
+
+		var userBurger = $('#burger').val().trim();
+		var capitalizeUserBurger = userBurger[0].toUpperCase() + userBurger.slice(1);
 
 		var newBurger = {
-			name: $('#burger').val().trim(),
+			name: capitalizeUserBurger,
 			devoured: false
 		};
 
