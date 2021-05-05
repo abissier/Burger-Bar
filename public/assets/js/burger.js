@@ -57,4 +57,8 @@ $(function() {
 			location.reload();
 		});
 	});
+	//------------------------------- Scroll back to top of page when h1 is clicked------------------------------
+	$('h1').on('click', function() {
+		$(window).scrollTop(0);
+	});
 });

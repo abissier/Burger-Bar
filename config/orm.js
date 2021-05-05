@@ -16,7 +16,6 @@ var orm = {
 		var isTrueSet = a.devoured == 'true';
 
 		var queryString = 'INSERT INTO burgers (burger_name, devoured) VALUES (';
-
 		queryString += "'";
 		queryString += a.burger_name;
 		queryString += "',";
